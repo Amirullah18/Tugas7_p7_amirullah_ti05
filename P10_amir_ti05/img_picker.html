@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <select name="dropdown_img" id="dropdown_img" onchange="gambar()">
+        <option hidden="--- Pilih Gambar ---"></option>
+        <option value="gorila">Gorila</option>
+        <option value="singa">Singa</option>
+        <option value="elang">Elang</option>
+    </select>
+    <br/>
+    <img alt="gambar" id="image" />
+
+    <script>
+        function gambar() {
+            let drop_img = document.getElementById("dropdown_img").value;
+            let image = document.getElementById("image");
+
+            if (drop_img == "gorila") {
+                image.setAttribute(
+                    "src",
+                    "https://asset.kompas.com/crops/HvzETxR01AIouJAFdSWRg4ksxrs=/18x0:1545x1018/375x240/data/photo/2021/04/05/606ab8a2a1720.jpg"
+                );
+                alert("Ini Gambar Gorila")
+
+            } else if (drop_img == "singa") {
+                image.setAttribute(
+                    "src",
+                    "https://www.befren.com/wp-content/uploads/2020/03/fakta-Menarik-Tentang-Singa-befren.com_.jpg"
+                );
+                alert("Ini Gambar singa")
+
+            } else if (drop_img == "elang") {
+                image.setAttribute(
+                    "src",
+                    "https://1.bp.blogspot.com/-t3l9o83PGPs/YBtMUB0QI7I/AAAAAAAAAmc/5Ax6v9sbkq8JKOvx1CIaVraAYZbf0GpMwCLcBGAsYHQ/s691/images%2B-%2B2021-02-04T082208.111.jpeg"
+                );
+                alert("Ini Gambar elang")
+
+            } else {
+                alert("Tidak Ada Gambar");
+            }
+        }
+    </script>
+</body>
+</html>
